@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    //ready espera a que el documento se haya cargado completamente
+    /*en ocasiones cuando es necesario cargar imagenes no es de vital 
+    importancia que estas se carguen completamente, para esto se utiliza el ready.
+     con load puedo determinar tambien el objetivo destino de ese elemento*/
+  $("button").click(function(){
+    $("#div1").load("demo_test.txt");
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+<button>Get External Content</button>
+
+</body>
+</html>
