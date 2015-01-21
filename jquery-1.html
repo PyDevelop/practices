@@ -9,7 +9,12 @@ $(document).ready(function(){
     importancia que estas se carguen completamente, para esto se utiliza el ready.
      con load puedo determinar tambien el objetivo destino de ese elemento*/
   $("button").click(function(){
-    $("#div1").load("demo_test.txt");
+    $("#div1").load("demo_test.txt #parrafo",function(responseText,statusTxt,xhr){
+        if (statusTxt == "success"){
+            alert("ok");
+        }
+    
+    });
   });
 });
 </script>
@@ -18,6 +23,5 @@ $(document).ready(function(){
 
 <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
 <button>Get External Content</button>
-
 </body>
 </html>
